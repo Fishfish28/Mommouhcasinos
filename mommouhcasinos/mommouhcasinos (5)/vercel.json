@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/(.*)\\.(png|jpg|jpeg|svg|ico|webmanifest)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(Mommouh%20png\\.png|Mommouh%20png|Mommouh\\s+png\\.png)",
+      "dest": "/Mommouh.png"
+    },
+    {
+      "src": "/(Fishfish%20png\\.png|Fishfish%20png|Fishfish\\s+png\\.png)",
+      "dest": "/Fishfish.png"
+    },
+    {
+      "src": "/(kirgo\\.png|k-black-mint\\.png|Kirgo\\.png)",
+      "dest": "/K-Black-Mint.png"
+    },
+    {
+      "src": "/(jackcasino\\.png|jackcasino\\.jpg|JackCasino\\.jpg)",
+      "dest": "/JackCasino.png"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
